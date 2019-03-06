@@ -1,0 +1,165 @@
+
+module pull_back_control(
+		input clk,
+    		input resetn,
+
+    		input start_pull_back, 	// signal to start this control
+		output pull_back_done,
+
+    		input draw_object_done,
+
+		input enable_next_nothingback_state, // from counter time to go to the next state
+		output reg enable_counter_nothingback,  // tell counter time to start
+		
+		// the location at which when the it was released
+		input [8:0] current_release_x,
+		input [7:0] current_release_y,
+		input reach_bottom,
+		
+		output reg erase_back_hook,    //singal for erasing hook at current location, need to take background colour
+    		output reg start_draw_back_hook,   // for draw hook
+
+    		output reg [8:0] back_x_start,
+    		output reg [7:0] back_y_start,
+		);
+    
+    reg decrement = 1'b1;
+    reg [8:0] x_current;
+    reg [7:0] y_current;
+	 
+    reg ld_xy, update_flip, update_position;
+
+    reg [4:0] current_state, next_state; 
+    
+    localparam  		
+		S_WAIT_FOR_COMMAND		= 5'd1,
+		S_DRAW				= 5'd2,
+		S_WAIT				= 5'd3,
+		S_ERASE				= 5'd4,
+		S_UPDATE_FLIP			= 5'd5,
+		S_CHECK_FOR_TOP			= 5'd6,
+		S_UPDATE_POSITION		= 5'd7,
+		S_EXIT_RELEASE			= 5'd8;
+
+
+    // Next state logic aka our state table
+    always@(*)
+    begin: state_table 
+           case (current_state)
+      S_WAIT_FOR_COMMAND: if(start_pull_back)
+				if (reach_bottom)
+					next_state = S_DRAW;
+				else
+					next_state = S_EXIT_RELEASE;
+			  else
+				next_state = S_WAIT_FOR_COMMAND;
+		S_DRAW: next_state = draw_object_done? S_WAIT: S_DRAW;
+		S_WAIT: next_state = enable_next_nothingback_state? S_ERASE: S_WAIT;
+		S_ERASE:next_state = draw_object_done? S_UPDATE_FLIP: S_ERASE;
+		S_UPDATE_FLIP: next_state = S_CHECK_FOR_TOP;
+		S_CHECK_FOR_TOP: next_state = (!decrement)? S_EXIT_RELEASE: S_UPDATE_POSITION;
+		S_UPDATE_POSITION: next_state = S_DRAW;
+		S_EXIT_RELEASE: next_state = S_WAIT_FOR_COMMAND;
+
+            
+			default:     next_state = S_WAIT_FOR_COMMAND;
+        endcase
+    end // state_table
+   
+
+    // Output logic aka all of our datapath control signals
+    always @(*)
+    begin: enable_signals
+        // By default make all our signals 0
+		
+		pull_back_done = 1'b0;
+		enable_counter_nothingback = 1'b0;
+
+		erase_back_hook = 1'b0;   
+    		start_draw_back_hook = 1'b0;
+
+    		back_x_start = 9'b0;
+    		back_y_start = 8'b0;
+
+		// signals for changing x_start, y_start
+		ld_xy = 1'b0;
+		update_flip = 1'b0;
+		update_position = 1'b0;
+		
+
+      case (current_state)
+		
+		S_WAIT_FOR_COMMAND: begin
+			ld_xy = 1'b1;
+		end
+
+		S_ERASE: begin 
+			release_x_start = x_current;
+			release_y_start = y_current;
+			start_draw_back_hook = 1'b1;
+			erase_back_hook = 1'b1;
+		end
+
+		S_WAIT: begin
+			enable_counter_nothingback = 1'b1;
+		end
+
+
+		S_UPDATE_FLIP: begin
+			update_flip = 1'b1;
+		end
+ 
+		S_UPDATE_POSITION: begin
+			update_position = 1'b1;
+		end
+
+		S_DRAW: begin
+			release_x_start = x_current;
+			release_y_start = y_current;
+			start_draw_back_hook = 1'b1;
+			erase_back_hook = 1'b0;
+		end
+		
+		S_EXIT_RELEASE: begin
+			pull_back_done = 1'b1;
+		end
+		
+        endcase
+    end // enable_signals
+   
+    // current_state registers
+    always@(posedge clk)
+    begin: state_FFs
+        if(!resetn)
+            current_state <= S_WAIT_FOR_COMMAND;
+        else
+            current_state <= next_state;
+    end // state_FFS
+	 
+	 
+	 
+    always@(posedge clk)
+    begin
+        if(ld_xy) begin
+        x_current <= current_hook_x;
+	y_current <= current_hook_y;
+	decrement <= 1'b1;  
+	end
+			
+	if(update_flip) begin
+		if(y_current == 8'd40) 
+			decrement <= ~decrement;
+		else 
+			decrement <= decrement;
+					
+	end
+
+	if(update_position)
+		y_current <= y_current - 1'b1;
+
+	 end
+	 
+endmodule
+
+
+

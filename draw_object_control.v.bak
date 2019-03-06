@@ -1,0 +1,118 @@
+
+module draw_object_control(input clock, resetn, start_draw_object, start_draw_bg,
+			   input [2:0] object_type,
+			   input [9:0] counter_object,
+			   input [16:0] counter_address_background,
+			   output reg  draw_object_done, draw_bg_done, writeEn,
+			   output reg  read_mem, load_colour, ld_bg,ld_colour_bg,
+			   output reg  enable_counter_object, reset_counter_object,		
+			   output reg  enable_counter_address_background, reset_counter_address_background
+			   );
+
+    reg[4:0] current_state, next_state;
+
+    localparam  S_WAIT_DRAW	     = 5'd0,
+	   S_LOAD_BG			= 5'd1,
+		S_WAIT_FOR_READ_BG = 5'd2,
+		S_LOAD_COLOUR_BG  =5'd3,
+		S_DRAW_BG	     = 5'd4,
+		S_DONE_BG	     = 5'd5,
+		S_READ_MEM           = 5'd6,
+		S_WAIT_FOR_READ	     = 5'd7,
+		S_LOAD_COLOUR	     = 5'd8,
+		S_DRAW_OBJECT	     = 5'd9,
+		S_DONE_OBJECT	     = 5'd10;
+		
+    // Next state logic aka our state table
+    always@(*)
+    begin: state_table 
+            case (current_state)
+                S_WAIT_DRAW: if (start_draw_bg) // for draw background
+					next_state = S_LOAD_BG;
+			     else if (start_draw_object)	// for draw object
+					next_state = S_READ_MEM;
+			     else
+					next_state = S_WAIT_DRAW;
+		// for drawing background
+		S_LOAD_BG: next_state = S_WAIT_FOR_READ_BG;  // load initial x,y
+		S_WAIT_FOR_READ_BG: next_state = S_LOAD_COLOUR_BG;  // wait for address to change and read in colour
+		S_LOAD_COLOUR_BG: next_state = S_DRAW_BG;  // wait one pulse to read in colour
+		S_DRAW_BG: next_state = (counter_address_background == 17'd76800) ? S_DONE_BG: S_WAIT_FOR_READ_BG;
+		S_DONE_BG: next_state = start_draw_bg ? S_DONE_BG : S_WAIT_DRAW;
+		
+		// for draw objects
+		S_READ_MEM:  next_state = S_WAIT_FOR_READ;
+		S_WAIT_FOR_READ: next_state = S_LOAD_COLOUR;
+		S_LOAD_COLOUR: next_state = S_DRAW_OBJECT;
+		S_DRAW_OBJECT: if(object_type == 3'b000)
+				  next_state = (counter_object == 10'd864) ? S_DONE_OBJECT : S_LOAD_COLOUR;
+							else 
+				  next_state = (counter_object == 10'd832) ? S_DONE_OBJECT : S_LOAD_COLOUR;
+		S_DONE_OBJECT: next_state = start_draw_object ? S_DONE_OBJECT : S_WAIT_DRAW;
+
+            default:     next_state = S_WAIT_DRAW;
+        endcase
+    end // state_table
+
+    // Output logic aka all of our datapath control signals
+    always @(*)
+    begin: enable_signals
+        // By default make all our signals 0
+   draw_bg_done = 0;
+	draw_object_done = 0;
+	writeEn = 0;
+	read_mem = 0; 
+	load_colour = 0; 
+	enable_counter_object = 0;
+ 	reset_counter_object = 0;
+	enable_counter_address_background = 0;
+	reset_counter_address_background = 0;
+	ld_bg = 0;
+	ld_colour_bg = 0;
+
+        case (current_state)
+		  
+		S_WAIT_DRAW: begin
+				reset_counter_object = 1;
+				reset_counter_address_background = 1;
+			     end
+				  
+		S_LOAD_BG: 
+				ld_bg = 1; // for initialize x,y to be 0,0
+				
+		S_LOAD_COLOUR_BG:
+				ld_colour_bg = 1;
+				
+		S_DRAW_BG: begin
+				writeEn = 1;
+				enable_counter_address_background = 1;
+			   end
+
+		S_DONE_BG: draw_bg_done = 1;
+
+		S_READ_MEM: read_mem = 1;
+
+		S_LOAD_COLOUR: load_colour = 1;
+
+		S_DRAW_OBJECT: begin
+				writeEn = 1;
+				enable_counter_object = 1;
+			       end		
+		S_DONE_OBJECT: draw_object_done = 1;
+		 
+		
+
+        // default:    // don't need default since we already made sure all of our outputs were assigned a value at the start of the always block
+        endcase
+    end // enable_signals
+   
+    // current_state registers
+    always@(posedge clock)
+    begin: state_FFs
+        if(!resetn)
+            current_state <= S_WAIT_DRAW;
+        else
+            current_state <= next_state;
+    end // state_FFS
+
+endmodule

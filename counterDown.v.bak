@@ -1,0 +1,50 @@
+counterDown(input enable, 
+	    input clk,
+	    input resetn,
+	    output reg [3:0] tenth,
+	    output reg [3:0] oneth,
+	    output reg time_done
+	    );
+
+wire one_second;
+
+always @(posedge clk) begin
+    if (!resetn) begin
+	oneth <= 4'd0;
+	tenth <= 4'd3;
+	time_done <= 1'b0;
+    end
+
+    else if (enable) begin
+   	if(one_second) begin
+	   if (oneth == 4'b0 && tenth == 4'b0) begin
+	     time_done <= 1'b1;
+	     oneth <= 4'd0;
+	     tenth <= 4'd3;
+	   end
+	   else if (oneth == 4'b0) begin
+	     tenth <= tenth - 1'b1;
+ 	     oneth <= 4'd9;
+	   end
+	   else begin
+	     tenth <= tenth;
+	     oneth <= oneth - 1'b1;
+	   end
+	end
+    end
+    else begin
+	oneth <= 4'd0;
+	tenth <= 4'd3;
+	time_done <= 1'b0;
+    end
+
+end
+
+counter_1sec(.clk(clk),
+	.enable_my_counter(enable),
+	.enable_next(one_second),
+	);
+
+endmodule
+
+

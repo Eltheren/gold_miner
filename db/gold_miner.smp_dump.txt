@@ -1,0 +1,329 @@
+
+State Machine - |gold_miner|DE1_SoC_Audio:comb_61|avconf:avc|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 
+
+State Machine - |gold_miner|audio_fail:audio_f|current_state
+Name current_state.S_DONE_AUDIO_FAIL current_state.S_LOAD_AUDIO8 current_state.S_WAIT7 current_state.S_LOAD_AUDIO7 current_state.S_WAIT6 current_state.S_LOAD_AUDIO6 current_state.S_WAIT5 current_state.S_LOAD_AUDIO5 current_state.S_WAIT4 current_state.S_LOAD_AUDIO4 current_state.S_WAIT3 current_state.S_LOAD_AUDIO3 current_state.S_WAIT2 current_state.S_LOAD_AUDIO2 current_state.S_WAIT1 current_state.S_LOAD_AUDIO1 current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_AUDIO1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_WAIT1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_AUDIO2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_WAIT2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_AUDIO3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_WAIT3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO4 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_WAIT4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO5 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT5 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO6 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT6 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO7 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT7 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO8 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_AUDIO_FAIL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|audio_win:audio_w|current_state
+Name current_state.S_DONE_AUDIO_SUCCESS current_state.S_LOAD_AUDIO8 current_state.S_WAIT7 current_state.S_LOAD_AUDIO7 current_state.S_WAIT6 current_state.S_LOAD_AUDIO6 current_state.S_WAIT5 current_state.S_LOAD_AUDIO5 current_state.S_WAIT4 current_state.S_LOAD_AUDIO4 current_state.S_WAIT3 current_state.S_LOAD_AUDIO3 current_state.S_WAIT2 current_state.S_LOAD_AUDIO2 current_state.S_WAIT1 current_state.S_LOAD_AUDIO1 current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_AUDIO1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_WAIT1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_AUDIO2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_WAIT2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_AUDIO3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_WAIT3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO4 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_WAIT4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO5 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT5 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO6 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT6 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO7 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT7 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO8 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_AUDIO_SUCCESS 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|update_score_control:update_score|current_state
+Name current_state.S_DONE_UPDATE_SCORE current_state.S_DRAW_THIRD current_state.S_WAIT_DRAW_THIRD current_state.S_DRAW_SECOND current_state.S_DRAW_SECOND_WAIT current_state.S_WAIT_DRAW_SECOND current_state.S_DRAW_FIRST current_state.S_WAIT_DRAW_FIRST current_state.S_UPDATE_SCORE current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 
+current_state.S_UPDATE_SCORE 0 0 0 0 0 0 0 0 1 1 
+current_state.S_WAIT_DRAW_FIRST 0 0 0 0 0 0 0 1 0 1 
+current_state.S_DRAW_FIRST 0 0 0 0 0 0 1 0 0 1 
+current_state.S_WAIT_DRAW_SECOND 0 0 0 0 0 1 0 0 0 1 
+current_state.S_DRAW_SECOND_WAIT 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_SECOND 0 0 0 1 0 0 0 0 0 1 
+current_state.S_WAIT_DRAW_THIRD 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_THIRD 0 1 0 0 0 0 0 0 0 1 
+current_state.S_DONE_UPDATE_SCORE 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|pull_back_control:back_control|current_state
+Name current_state.S_LOAD_AUDIO2 current_state.S_LOAD_AUDIO3 current_state.S_WAIT_FOR_AUDIO2 current_state.S_WAIT_FOR_AUDIO current_state.S_EXIT_RELEASE current_state.S_ERASE_FINAL_OBJECT current_state.S_WAIT_FOR_POINT5_SEC current_state.S_DRAW_FINAL_OBJECT current_state.S_UPDATE_POSITION_OBJECT current_state.S_CHECK_FOR_TOP_OBJECT current_state.S_UPDATE_FLIP_OBJECT current_state.S_ERASE_OBJECT current_state.S_WAIT_OBJECT current_state.S_DRAW_OBJECT current_state.S_LOAD_OBJECT_LOCATION current_state.S_ERASE_REACHED_OBJECT current_state.S_WAIT_FOR_READ_LOCATION current_state.S_READ_LOCATION current_state.S_COMPARE_POSITION current_state.S_WAIT_FOR_RESET_READ current_state.S_RESET_OBJECT_LOCATION current_state.S_UPDATE_POSITION_HOOK current_state.S_CHECK_FOR_TOP_HOOK current_state.S_UPDATE_FLIP_HOOK current_state.S_ERASE_HOOK current_state.S_WAIT_NOTHINGBACK current_state.S_DRAW_HOOK current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_DRAW_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_WAIT_NOTHINGBACK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_ERASE_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_UPDATE_FLIP_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_CHECK_FOR_TOP_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_UPDATE_POSITION_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_RESET_OBJECT_LOCATION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_WAIT_FOR_RESET_READ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_COMPARE_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_READ_LOCATION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_FOR_READ_LOCATION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_ERASE_REACHED_OBJECT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_OBJECT_LOCATION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_OBJECT 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_OBJECT 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_ERASE_OBJECT 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_FLIP_OBJECT 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_CHECK_FOR_TOP_OBJECT 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_POSITION_OBJECT 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_FINAL_OBJECT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_FOR_POINT5_SEC 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_ERASE_FINAL_OBJECT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_EXIT_RELEASE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_FOR_AUDIO 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_FOR_AUDIO2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO3 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_AUDIO2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|release_control:release_hook|current_state
+Name current_state.S_EXIT_RELEASE current_state.S_UPDATE_BLACK_LINE current_state.S_DRAW_FINISHED_BLACK_LINE current_state.S_LOAD_FINISHED_BLACK_LINE current_state.S_DRAW_BLACK_LINE current_state.S_UPDATE_POSITION current_state.S_CHECK_FOR_PULL_BACK current_state.S_UPDATE_FLIP current_state.S_WAIT_FOR_CHECK_COUNTER current_state.S_LOAD_CHECK_ADDRESS current_state.S_ERASE current_state.S_WAIT current_state.S_DRAW current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_DRAW 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_WAIT 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_ERASE 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_LOAD_CHECK_ADDRESS 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_WAIT_FOR_CHECK_COUNTER 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_UPDATE_FLIP 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_CHECK_FOR_PULL_BACK 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_UPDATE_POSITION 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_BLACK_LINE 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_FINISHED_BLACK_LINE 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_FINISHED_BLACK_LINE 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_BLACK_LINE 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_EXIT_RELEASE 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|move_hook_control:move_hook|current_state
+Name current_state.S_EXIT_MOVE current_state.S_ERASE current_state.S_UPDATE_POSITION current_state.S_UPDATE_FLIP current_state.S_WAIT current_state.S_DRAW current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 
+current_state.S_DRAW 0 0 0 0 0 1 1 
+current_state.S_WAIT 0 0 0 0 1 0 1 
+current_state.S_UPDATE_FLIP 0 0 0 1 0 0 1 
+current_state.S_UPDATE_POSITION 0 0 1 0 0 0 1 
+current_state.S_ERASE 0 1 0 0 0 0 1 
+current_state.S_EXIT_MOVE 1 0 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_initial_objects_control:draw_initial|current_state
+Name current_state.S_DONE_DRAW_INITIAL current_state.S_DRAW_MONEY current_state.S_LOAD_MONEY_POSITION current_state.S_DRAW_GOAL_NUM3 current_state.S_LOAD_GOAL_NUM3_POSITION current_state.S_DRAW_GOAL_NUM2 current_state.S_LOAD_GOAL_NUM2_POSITION current_state.S_DRAW_GOAL_NUM1 current_state.S_LOAD_GOAL_NUM1_POSITION current_state.S_DRAW_LEVEL current_state.S_LOAD_LEVEL_POSITION current_state.S_DRAW_GM4 current_state.S_LOAD_GM4_POSITION current_state.S_DRAW_RM3 current_state.S_LOAD_RM3_POSITION current_state.S_DRAW_GM3 current_state.S_LOAD_GM3_POSITION current_state.S_DRAW_RL3 current_state.S_LOAD_RL3_POSITION current_state.S_DRAW_RM2 current_state.S_LOAD_RM2_POSITION current_state.S_DRAW_GM2 current_state.S_LOAD_GM2_POSITION current_state.S_DRAW_RL2 current_state.S_LOAD_RL2_POSITION current_state.S_DRAW_GL2 current_state.S_LOAD_GL2_POSITION current_state.S_DRAW_RM1 current_state.S_LOAD_RM1_POSITION current_state.S_DRAW_GM1 current_state.S_LOAD_GM1_POSITION current_state.S_DRAW_RL1 current_state.S_LOAD_RL1_POSITION current_state.S_DRAW_GL1 current_state.S_LOAD_GL1_POSITION current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_GL1_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_GL1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_RL1_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_RL1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_GM1_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_GM1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_RM1_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_RM1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GL2_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GL2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_RL2_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_RL2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GM2_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GM2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_RM2_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_RM2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_RL3_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_RL3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GM3_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GM3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_RM3_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_RM3 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GM4_POSITION 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GM4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_LEVEL_POSITION 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_LEVEL 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GOAL_NUM1_POSITION 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GOAL_NUM1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GOAL_NUM2_POSITION 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GOAL_NUM2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_GOAL_NUM3_POSITION 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_GOAL_NUM3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_MONEY_POSITION 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_MONEY 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_DRAW_INITIAL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_bg_control:background|current_state
+Name current_state.S_DONE_BG current_state.S_DRAW_BG current_state.S_LOAD_COLOUR_BG current_state.S_WAIT_FOR_READ_BG current_state.S_LOAD_BG current_state.S_WAIT_DRAW 
+current_state.S_WAIT_DRAW 0 0 0 0 0 0 
+current_state.S_LOAD_BG 0 0 0 0 1 1 
+current_state.S_WAIT_FOR_READ_BG 0 0 0 1 0 1 
+current_state.S_LOAD_COLOUR_BG 0 0 1 0 0 1 
+current_state.S_DRAW_BG 0 1 0 0 0 1 
+current_state.S_DONE_BG 1 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_object_control:object|current_state
+Name current_state.S_DRAW_OBJECT current_state.S_STORE_CURRENT_BG current_state.S_STORE_TYPE current_state.S_LOAD_COLOUR current_state.S_WAIT_FOR_READ current_state.S_STORE_OBJECT_LOCATION current_state.S_READ_MEM current_state.S_WAIT_DRAW current_state.S_DONE_OBJECT 
+current_state.S_WAIT_DRAW 0 0 0 0 0 0 0 0 0 
+current_state.S_READ_MEM 0 0 0 0 0 0 1 1 0 
+current_state.S_STORE_OBJECT_LOCATION 0 0 0 0 0 1 0 1 0 
+current_state.S_WAIT_FOR_READ 0 0 0 0 1 0 0 1 0 
+current_state.S_LOAD_COLOUR 0 0 0 1 0 0 0 1 0 
+current_state.S_STORE_TYPE 0 0 1 0 0 0 0 1 0 
+current_state.S_STORE_CURRENT_BG 0 1 0 0 0 0 0 1 0 
+current_state.S_DRAW_OBJECT 1 0 0 0 0 0 0 1 0 
+current_state.S_DONE_OBJECT 0 0 0 0 0 0 0 1 1 
+
+State Machine - |gold_miner|draw_win_page_control:win_page|current_state
+Name current_state.S_DONE_DRAW_WIN_PAGE current_state.S_DRAW_N current_state.S_LOAD_N current_state.S_DRAW_I current_state.S_LOAD_I current_state.S_DRAW_W current_state.S_LOAD_W current_state.S_DRAW_U current_state.S_LOAD_U current_state.S_DRAW_O current_state.S_LOAD_O current_state.S_DRAW_Y current_state.S_LOAD_Y current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_Y 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_Y 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_O 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_O 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_U 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_U 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_W 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_W 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_I 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_I 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_N 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_N 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_DRAW_WIN_PAGE 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_fail_page_control:fail_page|current_state
+Name current_state.S_DONE_DRAW_FAIL_PAGE current_state.S_DRAW_D current_state.S_LOAD_D current_state.S_DRAW_E3 current_state.S_LOAD_E3 current_state.S_DRAW_L3 current_state.S_LOAD_L3 current_state.S_DRAW_I current_state.S_LOAD_I current_state.S_DRAW_A current_state.S_LOAD_A current_state.S_DRAW_F current_state.S_LOAD_F current_state.S_DRAW_L2 current_state.S_LOAD_L2 current_state.S_DRAW_E2 current_state.S_LOAD_E2 current_state.S_DRAW_V current_state.S_LOAD_V current_state.S_DRAW_E1 current_state.S_LOAD_E1 current_state.S_DRAW_L1 current_state.S_LOAD_L1 current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_L1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_L1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_E1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_E1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_V 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_V 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_E2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_E2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_L2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_L2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_F 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_F 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_A 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_A 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_I 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_I 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_L3 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_L3 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_E3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_E3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_D 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_D 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_DRAW_FAIL_PAGE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_next_level_page_control:next_level_page|current_state
+Name current_state.S_DONE_DRAW_NEXT_LEVEL_PAGE current_state.S_DRAW_P current_state.S_LOAD_P current_state.S_DRAW_U current_state.S_LOAD_U current_state.S_DRAW_L2 current_state.S_LOAD_L2 current_state.S_DRAW_E2 current_state.S_LOAD_E2 current_state.S_DRAW_V current_state.S_LOAD_V current_state.S_DRAW_E1 current_state.S_LOAD_E1 current_state.S_DRAW_L1 current_state.S_LOAD_L1 current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_L1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_L1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_E1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_E1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_V 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_V 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_E2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_E2 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_L2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_L2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_U 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_U 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_P 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_P 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_DRAW_NEXT_LEVEL_PAGE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|draw_start_page_control:start_page|current_state
+Name current_state.S_DONE_DRAW_START_PAGE current_state.S_DRAW_N2 current_state.S_LOAD_N2 current_state.S_DRAW_I current_state.S_LOAD_I current_state.S_DRAW_G current_state.S_LOAD_G current_state.S_DRAW_E3 current_state.S_LOAD_E3 current_state.S_DRAW_B current_state.S_LOAD_B current_state.S_DRAW_O current_state.S_LOAD_O current_state.S_DRAW_T2 current_state.S_LOAD_T2 current_state.S_DRAW_R current_state.S_LOAD_R current_state.S_DRAW_E2 current_state.S_LOAD_E2 current_state.S_DRAW_T1 current_state.S_LOAD_T1 current_state.S_DRAW_N1 current_state.S_LOAD_N1 current_state.S_DRAW_E1 current_state.S_LOAD_E1 current_state.S_WAIT_FOR_COMMAND 
+current_state.S_WAIT_FOR_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_E1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_E1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_LOAD_N1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_N1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_LOAD_T1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_DRAW_T1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_LOAD_E2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_E2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_R 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_R 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_T2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_T2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_O 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_O 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_B 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_B 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_E3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_E3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_G 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_G 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_I 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_I 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_LOAD_N2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_N2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DONE_DRAW_START_PAGE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|control:c0|current_state
+Name current_state.S_WIN current_state.S_WIN_PAGE current_state.S_WAIT_CLEAR_SCREEN4 current_state.S_CLEAR_SCREEN4 current_state.S_NEXT_LEVEL current_state.S_NEXT_LEVEL_PAGE current_state.S_WAIT_CLEAR_SCREEN3 current_state.S_CLEAR_SCREEN3 current_state.S_SUCCESS current_state.S_FAIL current_state.S_FAIL_PAGE current_state.S_WAIT_CLEAR_SCREEN2 current_state.S_CLEAR_SCREEN2 current_state.S_CHECK_SCORE current_state.S_UPDATE_SCORE current_state.S_PULL_BACK_HOOK current_state.S_RELEASE_HOOK current_state.S_MOVE_HOOK_WAIT current_state.S_MOVE_HOOK current_state.S_DRAW_OBJECTS current_state.S_CLEAR_CURRENT_BG current_state.S_WAIT_DRAW_BG current_state.S_DRAW_BG current_state.S_START_GAME_WAIT current_state.S_START_GAME current_state.S_DRAW_START_PAGE current_state.S_WAIT_CLEAR_SCREEN1 current_state.S_CLEAR_SCREEN1 current_state.S_WAIT_BACKGROUND current_state.S_BACKGROUND 
+current_state.S_BACKGROUND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_WAIT_BACKGROUND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_CLEAR_SCREEN1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_WAIT_CLEAR_SCREEN1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_DRAW_START_PAGE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_START_GAME 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_START_GAME_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_DRAW_BG 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_WAIT_DRAW_BG 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_CLEAR_CURRENT_BG 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_OBJECTS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_MOVE_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_MOVE_HOOK_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_RELEASE_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_PULL_BACK_HOOK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_SCORE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_CHECK_SCORE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_CLEAR_SCREEN2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_CLEAR_SCREEN2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_FAIL_PAGE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_FAIL 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_SUCCESS 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_CLEAR_SCREEN3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_CLEAR_SCREEN3 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_NEXT_LEVEL_PAGE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_NEXT_LEVEL 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_CLEAR_SCREEN4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WAIT_CLEAR_SCREEN4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WIN_PAGE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_WIN 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|PS2_Controller:PS2|s_ps2_transceiver
+Name s_ps2_transceiver.PS2_STATE_3_END_TRANSFER s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT s_ps2_transceiver.PS2_STATE_1_DATA_IN s_ps2_transceiver.PS2_STATE_0_IDLE s_ps2_transceiver.PS2_STATE_4_END_DELAYED 
+s_ps2_transceiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_transceiver.PS2_STATE_1_DATA_IN 0 0 1 1 0 
+s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT 0 1 0 1 0 
+s_ps2_transceiver.PS2_STATE_3_END_TRANSFER 1 0 0 1 0 
+s_ps2_transceiver.PS2_STATE_4_END_DELAYED 0 0 0 1 1 
+
+State Machine - |gold_miner|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter
+Name s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION s_ps2_transmitter.PS2_STATE_0_IDLE 
+s_ps2_transmitter.PS2_STATE_0_IDLE 0 0 0 0 0 0 0 0 
+s_ps2_transmitter.PS2_STATE_1_INITIATE_COMMUNICATION 0 0 0 0 0 0 1 1 
+s_ps2_transmitter.PS2_STATE_2_WAIT_FOR_CLOCK 0 0 0 0 0 1 0 1 
+s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA 0 0 0 0 1 0 0 1 
+s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT 0 0 0 1 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT 0 0 1 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT 0 1 0 0 0 0 0 1 
+s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR 1 0 0 0 0 0 0 1 
+
+State Machine - |gold_miner|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver
+Name s_ps2_receiver.PS2_STATE_3_PARITY_IN s_ps2_receiver.PS2_STATE_2_DATA_IN s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA s_ps2_receiver.PS2_STATE_0_IDLE s_ps2_receiver.PS2_STATE_4_STOP_IN 
+s_ps2_receiver.PS2_STATE_0_IDLE 0 0 0 0 0 
+s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA 0 0 1 1 0 
+s_ps2_receiver.PS2_STATE_2_DATA_IN 0 1 0 1 0 
+s_ps2_receiver.PS2_STATE_3_PARITY_IN 1 0 0 1 0 
+s_ps2_receiver.PS2_STATE_4_STOP_IN 0 0 0 1 1 

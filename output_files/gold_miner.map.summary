@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Nov 27 07:31:18 2017
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : gold_miner
+Top-level Entity Name : gold_miner
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1281
+Total pins : 68
+Total virtual pins : 0
+Total block memory bits : 1,931,908
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2
+Total DLLs : 0

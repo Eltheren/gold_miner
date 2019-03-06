@@ -1,0 +1,43 @@
+
+module datapath(
+    input clk,
+    input resetn,
+    input [8:0] data,
+    input ld_x, ld_y, ld_type, 
+    output reg object_type,
+//    output reg [8:0] x,
+//    output reg [7:0] y,
+    output reg [8:0] x_start,
+    output reg [7:0] y_start
+    );
+
+
+    // Registers x, y, colour with respective input logic
+    always@(posedge clk) begin
+        if(!resetn) begin
+//            x <= 9'b0; 
+//	    y <= 8'b0;
+	    object_type <= 1'b0;
+	    x_start <= 9'b0; 
+	    y_start <= 8'b0;
+        end
+
+        else begin
+            
+	    if(ld_x) begin
+                x_start <= data[8:0];
+	//	x <= data[8:0];
+	    end
+
+            if(ld_y) begin
+                y_start <= data[7:0]; 
+	//	y <= data[7:0]; 
+	    end
+
+            if(ld_type) 
+		object_type <= data[0];
+
+    	end
+      end
+
+ endmodule
